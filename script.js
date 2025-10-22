@@ -17,21 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // 3. Prepara a mensagem para envio (Exemplo: WhatsApp/Email)
-        const mensagem = `Olá! Gostaria de pré-agendar um horário. 
+        // 3. Prepara a mensagem para envio (WhatsApp)
+        // O valor do 'servico' virá agora como "Volume Hibrido", "Design de Sobrancelhas", etc.
+        const mensagem = `Olá Ana! Gostaria de pré-agendar um horário. 
         \nNome: ${nome}
         \nServiço Desejado: ${servico}
-        \nWhatsApp para contato: ${whatsapp}
-        \nAguardo confirmação!`;
+        \nMeu WhatsApp para contato: ${whatsapp}
+        \nAguardo a confirmação da disponibilidade!`;
 
-        // **Ação de envio:**
-        // Como o GitHub Pages é estático, a forma mais fácil é direcionar para o WhatsApp.
-        // Você precisará configurar seu número de WhatsApp abaixo.
-        
-        const numeroWhatsapp = "5521981870347"; // Substitua XX9XXXXXXXX pelo seu número
+        // **AÇÃO DE ENVIO:**
+        // Configure seu número de WhatsApp. O formato deve ser Código do País (55) + DDD (21) + Número.
+        const numeroWhatsapp = "5521981870347"; // Seu número (21) 98187-0347
 
         // Cria o link do WhatsApp com a mensagem pré-preenchida
-        const linkWhatsapp = `https://www.instagram.com/anapaullasill?igsh=MXI0cmx1ZTdldnEwcw%3D%3D&utm_source=qr${numeroWhatsapp}&text=${encodeURIComponent(mensagem)}`;
+        const linkWhatsapp = `https://api.whatsapp.com/send?phone=${numeroWhatsapp}&text=${encodeURIComponent(mensagem)}`;
 
         // Abre o WhatsApp
         window.open(linkWhatsapp, '_blank');
