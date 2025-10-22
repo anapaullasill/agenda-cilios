@@ -1,10 +1,12 @@
-/* Configurações Globais */
+/* Configurações Globais - TEMA DARK PINK */
 :root {
-    --cor-primaria: #ff69b4; /* Rosa Choque/Pink */
-    --cor-secundaria: #333;
-    --cor-fundo: #f8f8f8;
-    --cor-texto: #555;
-    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --cor-primaria: #FF69B4; /* Pink (Rosa Choque) - Destaque */
+    --cor-secundaria: #E5398F; /* Rosa mais escuro para botões hover */
+    --cor-fundo: #121212; /* Fundo principal (Dark Mode) */
+    --cor-card-fundo: #1E1E1E; /* Fundo dos cards e formulário */
+    --cor-texto-claro: #E0E0E0; /* Texto principal claro */
+    --cor-texto-escuro: #B0B0B0; /* Texto secundário */
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
 }
 
 * {
@@ -16,8 +18,9 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    /* NOVO: Fundo escuro e texto claro */
     background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    color: var(--cor-texto-claro);
 }
 
 .container {
@@ -29,14 +32,16 @@ body {
 
 h2 {
     text-align: center;
-    color: var(--cor-secundaria);
+    /* NOVO: Título em destaque rosa */
+    color: var(--cor-primaria);
     margin-bottom: 30px;
     font-size: 2em;
 }
 
 /* Header */
 header {
-    background-color: #fff;
+    /* NOVO: Fundo escuro para o cabeçalho */
+    background-color: var(--cor-card-fundo);
     box-shadow: var(--sombra);
     position: sticky;
     top: 0;
@@ -56,7 +61,8 @@ header h1 {
 }
 
 nav a {
-    color: var(--cor-secundaria);
+    /* NOVO: Links de navegação em cor clara */
+    color: var(--cor-texto-claro);
     text-decoration: none;
     margin-left: 20px;
     transition: color 0.3s;
@@ -81,17 +87,17 @@ nav a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #e5559c;
+    /* NOVO: Rosa mais escuro no hover */
+    background-color: var(--cor-secundaria);
     transform: translateY(-2px);
 }
 
 
-/* Seção Hero - MAIOR PARA APARECER MAIS OS CÍLIOS */
+/* Seção Hero */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagens/cilios2.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/cilios2.jpg') no-repeat center center/cover;
     color: white;
-    /* Aumenta o padding para a imagem ficar maior */
-    padding: 150px 0; /* Era 100px */
+    padding: 150px 0;
     text-align: center;
 }
 
@@ -109,34 +115,36 @@ nav a:hover {
 /* NOVA SEÇÃO: Sobre Mim */
 .sobre-mim {
     padding: 60px 0;
-    background-color: #f0f0f0;
+    /* NOVO: Fundo ligeiramente diferente do principal */
+    background-color: var(--cor-card-fundo);
     text-align: center;
+    color: var(--cor-texto-escuro); /* Texto um pouco mais suave */
 }
 
 .sobre-conteudo {
     display: flex;
-    flex-direction: column; /* Padrão para mobile */
+    flex-direction: column;
     align-items: center;
-    gap: 40px; /* Espaçamento entre a imagem e o texto */
+    gap: 40px;
 }
 
 .minha-foto {
-    width: 250px; /* Tamanho da sua foto */
-    height: 250px; /* Tamanho da sua foto */
-    border-radius: 50%; /* Deixa a foto redonda */
-    object-fit: cover; /* Garante que a imagem preencha o círculo */
-    border: 5px solid var(--cor-primaria); /* Borda em volta da foto */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-primaria);
     box-shadow: var(--sombra);
 }
 
 .sobre-texto {
     max-width: 600px;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
 }
 
 .sobre-texto h2 {
-    text-align: left; /* Alinha o título à esquerda */
-    color: var(--cor-primaria);
+    text-align: left;
+    color: var(--cor-primaria); /* Título em rosa choque */
     margin-bottom: 15px;
 }
 
@@ -152,7 +160,8 @@ nav a:hover {
 }
 
 .servico-card {
-    background-color: white;
+    /* NOVO: Fundo dos cards escuro */
+    background-color: var(--cor-card-fundo);
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--sombra);
@@ -172,7 +181,8 @@ nav a:hover {
 
 /* Seção Agendamento (Formulário) */
 .agendamento {
-    background-color: #fff;
+    /* NOVO: Fundo escuro */
+    background-color: var(--cor-fundo);
     padding: 60px 0;
     text-align: center;
 }
@@ -181,7 +191,8 @@ nav a:hover {
     max-width: 500px;
     margin: 30px auto 0;
     padding: 20px;
-    background: var(--cor-fundo);
+    /* NOVO: Fundo do formulário escuro */
+    background: var(--cor-card-fundo);
     border-radius: 8px;
     box-shadow: var(--sombra);
 }
@@ -195,14 +206,18 @@ nav a:hover {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: var(--cor-secundaria);
+    /* NOVO: Labels em cor clara */
+    color: var(--cor-texto-claro);
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    /* NOVO: Campos escuros com texto claro */
+    border: 1px solid #444;
+    background-color: #333;
+    color: var(--cor-texto-claro);
     border-radius: 4px;
     font-size: 1em;
 }
@@ -210,25 +225,41 @@ nav a:hover {
 .feedback-text {
     margin-top: 20px;
     font-weight: bold;
-    color: var(--cor-secundaria);
+    /* NOVO: Feedback em rosa choque */
+    color: var(--cor-primaria);
 }
 
 /* Footer */
 footer {
-    background-color: var(--cor-secundaria);
-    color: white;
+    /* NOVO: Fundo escuro */
+    background-color: var(--cor-card-fundo);
+    color: var(--cor-texto-escuro);
     padding: 30px 0;
     text-align: center;
+    border-top: 1px solid #333;
 }
 
 footer p {
     margin: 5px 0;
 }
 
+/* Estilo do link do Instagram no Footer */
+footer .link-instagram {
+    color: var(--cor-primaria); /* Usa o rosa choque para destaque */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer .link-instagram:hover {
+    color: var(--cor-texto-claro); /* Fica claro no hover */
+    text-decoration: underline;
+}
+
 /* Responsividade Básica */
-@media (min-width: 768px) { /* Para telas maiores, a foto e o texto ficam lado a lado */
+@media (min-width: 768px) {
     .sobre-conteudo {
-        flex-direction: row; /* Coloca a imagem e o texto lado a lado */
+        flex-direction: row;
         justify-content: center;
     }
 
@@ -241,7 +272,7 @@ footer p {
     }
 }
 
-@media (max-width: 767px) { /* Ajustes para telas menores (mobile) */
+@media (max-width: 767px) {
     header .container {
         flex-direction: column;
     }
@@ -250,27 +281,16 @@ footer p {
     }
     nav a {
         margin: 0 10px;
-        display: block; /* Para links de navegação em mobile */
+        display: block;
         padding: 5px 0;
     }
     .hero h2 {
         font-size: 2.5em;
     }
     .sobre-texto h2 {
-        text-align: center; /* Centraliza o título "Olá, eu sou a Ana!" no mobile */
+        text-align: center;
     }
     .sobre-texto {
-        text-align: center; /* Centraliza o texto "Sobre Mim" no mobile */
+        text-align: center;
     }
-}/* Estilo do link do Instagram no Footer */
-footer .link-instagram {
-    color: var(--cor-primaria); /* Usa o rosa choque para destaque */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-footer .link-instagram:hover {
-    color: #fff; /* Fica branco quando o mouse passa por cima */
-    text-decoration: underline;
 }
