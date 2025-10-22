@@ -86,11 +86,12 @@ nav a:hover {
 }
 
 
-/* Seção Hero */
+/* Seção Hero - MAIOR PARA APARECER MAIS OS CÍLIOS */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagens/cilios.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagens/cilios2.jpg') no-repeat center center/cover;
     color: white;
-    padding: 100px 0;
+    /* Aumenta o padding para a imagem ficar maior */
+    padding: 150px 0; /* Era 100px */
     text-align: center;
 }
 
@@ -103,6 +104,40 @@ nav a:hover {
 .hero p {
     font-size: 1.2em;
     margin-bottom: 30px;
+}
+
+/* NOVA SEÇÃO: Sobre Mim */
+.sobre-mim {
+    padding: 60px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.sobre-conteudo {
+    display: flex;
+    flex-direction: column; /* Padrão para mobile */
+    align-items: center;
+    gap: 40px; /* Espaçamento entre a imagem e o texto */
+}
+
+.minha-foto {
+    width: 250px; /* Tamanho da sua foto */
+    height: 250px; /* Tamanho da sua foto */
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border: 5px solid var(--cor-primaria); /* Borda em volta da foto */
+    box-shadow: var(--sombra);
+}
+
+.sobre-texto {
+    max-width: 600px;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.sobre-texto h2 {
+    text-align: left; /* Alinha o título à esquerda */
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
 }
 
 /* Seção Serviços */
@@ -191,7 +226,22 @@ footer p {
 }
 
 /* Responsividade Básica */
-@media (max-width: 768px) {
+@media (min-width: 768px) { /* Para telas maiores, a foto e o texto ficam lado a lado */
+    .sobre-conteudo {
+        flex-direction: row; /* Coloca a imagem e o texto lado a lado */
+        justify-content: center;
+    }
+
+    .sobre-texto {
+        text-align: left;
+    }
+
+    .sobre-texto h2 {
+        text-align: left;
+    }
+}
+
+@media (max-width: 767px) { /* Ajustes para telas menores (mobile) */
     header .container {
         flex-direction: column;
     }
@@ -200,8 +250,27 @@ footer p {
     }
     nav a {
         margin: 0 10px;
+        display: block; /* Para links de navegação em mobile */
+        padding: 5px 0;
     }
     .hero h2 {
         font-size: 2.5em;
     }
+    .sobre-texto h2 {
+        text-align: center; /* Centraliza o título "Olá, eu sou a Ana!" no mobile */
+    }
+    .sobre-texto {
+        text-align: center; /* Centraliza o texto "Sobre Mim" no mobile */
+    }
+}/* Estilo do link do Instagram no Footer */
+footer .link-instagram {
+    color: var(--cor-primaria); /* Usa o rosa choque para destaque */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer .link-instagram:hover {
+    color: #fff; /* Fica branco quando o mouse passa por cima */
+    text-decoration: underline;
 }
