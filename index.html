@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Cílios & Sobrancelhas - Agende seu Horário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Beauty Studio</h1>
+            <nav>
+                <a href="#servicos">Serviços</a>
+                <a href="#agendamento">Agendar</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h2>Transforme seu Olhar!</h2>
+            <p>Especialista em Alongamento de Cílios e Design de Sobrancelhas.</p>
+            <a href="#agendamento" class="btn-primary">Agendar um Horário</a>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servico-card">
+                <h3>Cílios Volume Russo</h3>
+                <p>Cílios volumosos, leves e com efeito impactante.</p>
+            </div>
+            <div class="servico-card">
+                <h3>Design de Sobrancelhas</h3>
+                <p>O formato perfeito para harmonizar seu rosto (com aplicação de Henna opcional).</p>
+            </div>
+            <div class="servico-card">
+                <h3>Manutenção</h3>
+                <p>Mantenha seus cílios sempre impecáveis com nossas manutenções.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendamento" class="agendamento">
+        <div class="container">
+            <h2>Pré-Agendamento Rápido</h2>
+            <p>Preencha os dados e entraremos em contato para confirmar a disponibilidade.</p>
+            
+            <form id="agendamento-form">
+                <div class="form-group">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="servico">Serviço Desejado:</label>
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione um Serviço</option>
+                        <option value="cilios">Alongamento de Cílios</option>
+                        <option value="sobrancelhas">Design de Sobrancelhas</option>
+                        <option value="manutencao">Manutenção</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">Seu WhatsApp:</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Enviar Pedido de Agendamento</button>
+                <p id="mensagem-feedback" class="feedback-text"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container">
+            <p>&copy; 2025 Beauty Studio. Todos os direitos reservados.</p>
+            <p>WhatsApp: (xx) xxxxx-xxxx | Siga-nos no Instagram!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
