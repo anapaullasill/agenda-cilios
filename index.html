@@ -4,21 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beleza Cílios & Sobrancelhas - Agende seu Horário</title>
+    <title>Cílios de Ana - Agende seu Horário</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <h1>Cílios de Ana</h1>
-           
             <nav>
                 <a href="#servicos">Serviços</a>
                 <a href="#agendamento">Agendar</a>
-                <a href="#sobre">Sobre Mim</a> 
-                <a href="Uhttps://www.instagram.com/anapaullasill?igsh=" target="_blank">Instagram</a>
+                <a href="#sobre">Sobre Mim</a>
+                <a href="https://www.instagram.com/cilios_de_ana?igsh=MTJveDR2dHluZWI5eA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
             </nav>
         </div>
     </header>
@@ -43,6 +41,7 @@
             </div>
         </div>
     </section>
+
     <section id="servicos" class="servicos">
         <div class="container">
             <h2>Nossos Serviços</h2>
@@ -79,17 +78,29 @@
                     <label for="nome">Seu Nome:</label>
                     <input type="text" id="nome" name="nome" required>
                 </div>
+
                 <div class="form-group">
                     <label for="servico">Serviço Desejado:</label>
                     <select id="servico" name="servico" required>
                         <option value="">Selecione um Serviço</option>
                         <option value="Volume Hibrido">Volume Híbrido</option>
                         <option value="Volume Brasileiro">Volume Brasileiro</option>
-                        <option value="Tufinho">Tufinho (Express)</option>
+                        <option value="Tufinho (Express)">Tufinho (Express)</option>
                         <option value="Design de Sobrancelhas">Design de Sobrancelhas</option>
                         <option value="Manutencao">Manutenção de Extensões</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="data">Data Desejada:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora">Horário Preferido:</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+
                 <div class="form-group">
                     <label for="whatsapp">Seu WhatsApp:</label>
                     <input type="tel" id="whatsapp" name="whatsapp" placeholder="(xx) xxxxx-xxxx" required>
@@ -104,13 +115,12 @@
     <footer id="contato">
         <div class="container">
             <p>&copy; 2025 Ana Paula Martins. Todos os direitos reservados.</p>
-            <p>WhatsApp: (21) 981870347 | Siga-nos no Instagram!</p>
+            <p>WhatsApp: (21) 981870347 |
+                <a href="https://www.instagram.com/cilios_de_ana" target="_blank" class="link-instagram">Instagram</a>
+            </p>
         </div>
     </footer>
-    
-    <footer id="contato">
-        <div class="container">
-            <p>&copy; 2025 Ana Paula Martins. Todos os direitos reservados.</p>
-            <p>WhatsApp: (21) 981870347 | <a href="URL_COMPLETA_DO_SEU_INSTAGRAM" target="_blank" class="link-instagram">Meu Instagram</a></p>
-        </div>
-    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

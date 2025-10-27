@@ -294,3 +294,17 @@ footer .link-instagram:hover {
         text-align: center;
     }
 }
+input:hover, select:hover {
+    border-color: var(--cor-primaria);
+}/* Campos de data e hora */
+input[type="date"],
+input[type="time"] {
+    color-scheme: dark;
+    border: 1px solid #444;
+    background-color: #333;
+    color: var(--cor-texto-claro);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1em;
+}
+
